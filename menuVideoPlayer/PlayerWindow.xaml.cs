@@ -20,22 +20,23 @@ namespace menuVideoPlayer
   /// </summary>
   public partial class PlayerWindow : Window
   {
-    private bool mediaPlayerIsPlaying = false;
     private int _currentVideoId=-1;
     private int currentVideoID
     {
       set
       {
-        mePlayer.Source = new Uri(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos) + "/"+Core.CMenuContainer.videoCollection.Where(x => x.ID == value).FirstOrDefault().VideoPath);
-        mediaPlayerIsPlaying = true;
-        //mePlayer.Play();
+        Uri Source = new Uri(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos) + "/"+Core.CMenuContainer.videoCollection.Where(x => x.ID == value).FirstOrDefault().VideoPath);
+        if (Source != null)
+        {
+          mePlayer.Source = Source;
+        }
+
       }
     }
     public PlayerWindow()
     {
       InitializeComponent();
 
-      mePlayer.SourceUpdated += mePlayer_SourceUpdated;
     
       InitplayList();
     }
@@ -47,7 +48,6 @@ namespace menuVideoPlayer
 
     private void mePlayer_SourceUpdated(object e, DataTransferEventArgs args)
     {
-      mediaPlayerIsPlaying = true;
       mePlayer.Play();
     }
 
@@ -61,13 +61,14 @@ namespace menuVideoPlayer
     {
 
       mePlayer.Play();
-      mediaPlayerIsPlaying = true;
     }
 
     //Продолжение после окончания
     private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
     {
+      currentVideoID = Core.CMenuContainer.videoCollection.Count - 1;
       mePlayer.Position = TimeSpan.FromMilliseconds(1);
+      
     }
 
     public void RecievePlayID(int ID)
