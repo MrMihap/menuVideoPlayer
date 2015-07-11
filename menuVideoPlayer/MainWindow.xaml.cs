@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Core;
+using menuVideoPlayer.controls;
 namespace menuVideoPlayer
 {
   /// <summary>
@@ -25,8 +26,13 @@ namespace menuVideoPlayer
     public MainWindow()
     {
       InitializeComponent();
+      // создаем
       playerWindow = new PlayerWindow();
       commandsController.playerWindow = playerWindow;
+
+      CMenuContainer.LoadFromConfig();
+      menuItemsListBox.Items.Add(new MenuItemControl());
+
     }
 
     private void Window_Loaded(object sender, RoutedEventArgs e)
