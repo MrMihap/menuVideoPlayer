@@ -38,9 +38,16 @@ namespace menuVideoPlayer.controls
     }
     public MenuItemControl(Core.MenuItem menuData)
     {
-      this.ID = menuData.ID;
-      this.Info = menuData.Info;
-      this.Header = menuData.Header;
+      InitializeComponent();
+      ID = menuData.ID;
+      Info = menuData.Info;
+      Header = menuData.Header;
+      //headerTextBox.Text = Header;
+    }
+
+    private void playButton_Click(object sender, RoutedEventArgs e)
+    {
+      CCommndsFlowController.SendPlayID(this.ID);
     }
 
   }

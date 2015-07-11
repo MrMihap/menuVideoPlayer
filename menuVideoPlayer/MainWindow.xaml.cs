@@ -21,19 +21,19 @@ namespace menuVideoPlayer
   /// </summary>
   public partial class MainWindow : Window
   {
-    private CCommndsFlowController commandsController = new CCommndsFlowController();
+    //private CCommndsFlowController commandsController ;//= new CCommndsFlowController();
     private PlayerWindow playerWindow;
     public MainWindow()
     {
+      CMenuContainer.LoadFromConfig();
       InitializeComponent();
       // создаем
       playerWindow = new PlayerWindow();
-      commandsController.playerWindow = playerWindow;
+      CCommndsFlowController.playerWindow = playerWindow;
 
-      CMenuContainer.LoadFromConfig();
       foreach (Core.MenuItem menuItem in CMenuContainer.videoCollection)
       {
-        menuItemsListBox.Items.Add(new MenuItemControl());
+        menuItemsListBox.Items.Add(new MenuItemControl(menuItem));
       }
     }
 

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace menuVideoPlayer
 {
-  class CCommndsFlowController
+  static class CCommndsFlowController
   {
-    public MainWindow menuWindow = null;
-    public PlayerWindow playerWindow = null;
+    static public MainWindow menuWindow = null;
+    static public PlayerWindow playerWindow = null;
 
 
-    void SendPlayID(int ID)
+    static public void SendPlayID(int ID)
     {
       if (playerWindow != null) playerWindow.RecievePlayID(ID);
     }

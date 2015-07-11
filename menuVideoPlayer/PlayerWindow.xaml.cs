@@ -45,7 +45,7 @@ namespace menuVideoPlayer
     }
     public void InitplayList()
     {
-      Core.CMenuContainer.LoadFromConfig();
+     // Core.CMenuContainer.LoadFromConfig();
       currentVideoID = 0;
     }
 
