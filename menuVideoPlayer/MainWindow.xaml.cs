@@ -20,9 +20,18 @@ namespace menuVideoPlayer
   /// </summary>
   public partial class MainWindow : Window
   {
+    private CCommndsFlowController commandsController = new CCommndsFlowController();
+    private PlayerWindow playerWindow;
     public MainWindow()
     {
       InitializeComponent();
+      playerWindow = new PlayerWindow();
+      commandsController.playerWindow = playerWindow;
+    }
+
+    private void Window_Loaded(object sender, RoutedEventArgs e)
+    {
+      playerWindow.Show();
     }
   }
 }
