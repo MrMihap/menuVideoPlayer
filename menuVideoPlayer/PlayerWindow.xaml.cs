@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Core;
-
+using System.IO;
 namespace menuVideoPlayer
 {
   /// <summary>
@@ -27,8 +27,9 @@ namespace menuVideoPlayer
     {
       set
       {
+        string filename = Core.CMenuContainer.videoCollection.Where(x => x.ID == value).FirstOrDefault().VideoPath;
 
-        Uri Source = new Uri(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos) + "/"+Core.CMenuContainer.videoCollection.Where(x => x.ID == value).FirstOrDefault().VideoPath);
+        Uri Source = new Uri(filename, UriKind.Relative);
         if (Source != null)
         {
           mePlayer.Source = Source;

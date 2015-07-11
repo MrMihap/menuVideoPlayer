@@ -31,8 +31,10 @@ namespace menuVideoPlayer
       commandsController.playerWindow = playerWindow;
 
       CMenuContainer.LoadFromConfig();
-      menuItemsListBox.Items.Add(new MenuItemControl());
-
+      foreach (Core.MenuItem menuItem in CMenuContainer.videoCollection)
+      {
+        menuItemsListBox.Items.Add(new MenuItemControl());
+      }
     }
 
     private void Window_Loaded(object sender, RoutedEventArgs e)

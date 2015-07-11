@@ -41,7 +41,6 @@ namespace Core
               MessageBox.Show("Ошибка загрузки данных: \n" + 
               "Для элемента" + menuItem.Header + 
               "\nНе удалось найти видео файл :" + menuItem.VideoPath);
-       
           }
           catch (Exception e)
           {
