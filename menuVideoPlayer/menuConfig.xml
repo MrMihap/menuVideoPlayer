@@ -14,6 +14,21 @@
       <info>iPhone shit shit shit shit shit shit shit shit</info>
       <videoPath>video2.mp4</videoPath>
     </menuItem>
+    <menuItem>
+      <header> Very good video</header>
+      <info>iPhone shit shit shit shit shit shit shit shit</info>
+      <videoPath>video3.mp4</videoPath>
+    </menuItem>
+	    <menuItem>
+      <header> VeryWOWdd video</header>
+      <info>iPhone shit shit shit shit shit shit shit shit</info>
+      <videoPath>video4.mp4</videoPath>
+    </menuItem>
+	    <menuItem>
+      <header> Very gooWOWOWOWOWOWd video</header>
+      <info>iPhone shit shit shit shit shit shit shit shit</info>
+      <videoPath>video5.mp4</videoPath>
+    </menuItem>
 
   </menu>
 </config>
