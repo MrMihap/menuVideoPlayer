@@ -1,14 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<menu>
-  <menuItem>
-    <header> Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying</header>
-    <info>Sexy lady comes crying by two mans help</info>
-    <videoPath>video1.mp4</videoPath>
-  </menuItem>
+<config>
+  <exhibitionName>
+    Музей Музеевич Музеев
+  </exhibitionName>
+  <menu>
     <menuItem>
-    <header> Hard triple iPhonization Hard triple iPhonization Hard triple iPhonization Hard triple iPhonization Hard triple iPhonization</header>
-    <info>iPhone shit shit shit shit shit shit shit shit</info>
-    <videoPath>video2.mp4</videoPath>
-  </menuItem>
+      <header> Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying</header>
+      <info>Sexy lady comes crying by two mans help</info>
+      <videoPath>video1.mp4</videoPath>
+    </menuItem>
+    <menuItem>
+      <header> Hard triple iPhonization Hard triple iPhonization Hard triple iPhonization Hard triple iPhonization Hard triple iPhonization</header>
+      <info>iPhone shit shit shit shit shit shit shit shit</info>
+      <videoPath>video2.mp4</videoPath>
+    </menuItem>
 
-</menu>
+  </menu>
+</config>
