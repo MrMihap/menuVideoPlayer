@@ -20,37 +20,25 @@ namespace menuVideoPlayer
   /// </summary>
   public partial class PlayerWindow : Window
   {
-<<<<<<< HEAD
     private bool mediaPlayerIsPlaying = false;
-=======
->>>>>>> origin/videowindowdev
+
     private int _currentVideoId=-1;
     private int currentVideoID
     {
       set
       {
-<<<<<<< HEAD
-        mePlayer.Source = new Uri(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos) + "/"+Core.CMenuContainer.videoCollection.Where(x => x.ID == value).FirstOrDefault().VideoPath);
-        mediaPlayerIsPlaying = true;
-        //mePlayer.Play();
-=======
+
         Uri Source = new Uri(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos) + "/"+Core.CMenuContainer.videoCollection.Where(x => x.ID == value).FirstOrDefault().VideoPath);
         if (Source != null)
         {
           mePlayer.Source = Source;
         }
-
->>>>>>> origin/videowindowdev
       }
     }
     public PlayerWindow()
     {
       InitializeComponent();
 
-<<<<<<< HEAD
-      mePlayer.SourceUpdated += mePlayer_SourceUpdated;
-=======
->>>>>>> origin/videowindowdev
     
       InitplayList();
     }
@@ -59,34 +47,8 @@ namespace menuVideoPlayer
       Core.CMenuContainer.LoadFromConfig();
       currentVideoID = 0;
     }
-<<<<<<< HEAD
 
-    private void mePlayer_SourceUpdated(object e, DataTransferEventArgs args)
-    {
-      mediaPlayerIsPlaying = true;
-      mePlayer.Play();
-    }
-
-
-    private void Play_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-    {
-      e.CanExecute = (mePlayer != null) && (mePlayer.Source != null);
-    }
-
-    private void Play_Executed(object sender, ExecutedRoutedEventArgs e)
-    {
-
-      mePlayer.Play();
-      mediaPlayerIsPlaying = true;
-    }
-
-    //Продолжение после окончания
-    private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
-    {
-      mePlayer.Position = TimeSpan.FromMilliseconds(1);
-=======
-
-    private void mePlayer_SourceUpdated(object e, DataTransferEventArgs args)
+      private void mePlayer_SourceUpdated(object e, DataTransferEventArgs args)
     {
       mePlayer.Play();
     }
@@ -99,7 +61,6 @@ namespace menuVideoPlayer
 
     private void Play_Executed(object sender, ExecutedRoutedEventArgs e)
     {
-
       mePlayer.Play();
     }
 
@@ -108,8 +69,6 @@ namespace menuVideoPlayer
     {
       currentVideoID = Core.CMenuContainer.videoCollection.Count - 1;
       mePlayer.Position = TimeSpan.FromMilliseconds(1);
-      
->>>>>>> origin/videowindowdev
     }
 
     public void RecievePlayID(int ID)
