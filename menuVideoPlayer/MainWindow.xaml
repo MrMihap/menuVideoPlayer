@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         WindowStartupLocation="CenterScreen" 
         Title="MainWindow" Height="364" Width="1900" Loaded="Window_Loaded" WindowStyle="None" Foreground="{x:Null}">
-    <Window.Background>
+     <Window.Background>
         <ImageBrush ImageSource="controls/img/background.png" />
     </Window.Background>
     <Grid>

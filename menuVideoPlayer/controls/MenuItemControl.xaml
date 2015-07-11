@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="menuVideoPlayer.controls.MenuItemControl" 
              mc:Ignorable="d" 
-             d:DesignHeight="106" Width="1630" VerticalAlignment="Top">
+             d:DesignHeight="106" Width="1630" VerticalAlignment="Top" Margin="0,0,0,40">
     <UserControl.Resources>
         <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
             <Border Background="{TemplateBinding Background}" 
@@ -27,10 +27,8 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="headerTextBox"
-                 Height="105" Margin="105,0,105,1" Template="{StaticResource TextBoxBaseControlTemplate}"
-                 Text="Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба"
-                 Width="1420" FontSize="24" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFFDFDFD" Foreground="Black">
-        </TextBox>
-        
+                 Height="105" Margin="130,0,130,1" Template="{StaticResource TextBoxBaseControlTemplate}"
+                 Text="Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба" FontSize="24" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFFDFDFD" Foreground="Black"/>
+
     </Grid>
 </UserControl>

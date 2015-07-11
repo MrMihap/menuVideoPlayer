@@ -71,6 +71,11 @@ namespace menuVideoPlayer
       mePlayer.Position = TimeSpan.FromMilliseconds(1);
     }
 
+    private void Player_Loaded(object sender, RoutedEventArgs e)
+    {
+      this.WindowState = System.Windows.WindowState.Maximized;
+    }
+
     public void RecievePlayID(int ID)
     {
       currentVideoID = ID;

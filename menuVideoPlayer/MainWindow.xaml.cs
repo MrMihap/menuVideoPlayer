@@ -35,15 +35,15 @@ namespace menuVideoPlayer
       playerWindow = new PlayerWindow();
       if (Screen.AllScreens.Count() > 1)
       {
-        Screen s1 = Screen.AllScreens[0];
-        Screen s2 = Screen.AllScreens[1];
+        Screen s1 = Screen.AllScreens[1];
+        //Screen s2 = Screen.AllScreens[1];
         System.Drawing.Rectangle r1 = s1.WorkingArea;
-        System.Drawing.Rectangle r2 = s2.WorkingArea;
+        //System.Drawing.Rectangle r2 = s2.WorkingArea;
         this.Left = r1.Left;
         this.Top = r1.Top;
 
-        playerWindow.Top = r2.Top;
-        playerWindow.Left = r2.Left;
+        //playerWindow.Top = r2.Top;
+        //playerWindow.Left = r2.Left;
       }
       CCommndsFlowController.playerWindow = playerWindow;
 
@@ -55,6 +55,7 @@ namespace menuVideoPlayer
 
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
+      this.WindowState = System.Windows.WindowState.Maximized;
       playerWindow.Show();
     }
   }
