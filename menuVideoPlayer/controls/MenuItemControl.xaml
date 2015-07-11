@@ -5,21 +5,32 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="menuVideoPlayer.controls.MenuItemControl" 
              mc:Ignorable="d" 
-             d:DesignHeight="106" Width="1920" VerticalAlignment="Top" Opacity="0">
+             d:DesignHeight="106" Width="1630" VerticalAlignment="Top">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}" 
+                x:Name="Bd" BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="30">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+        </ControlTemplate>
+    </UserControl.Resources>
     <Grid>
-
-        <Button x:Name="playButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="105" Click="playButton_Click">
+        <Button x:Name="playButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="105" Click="playButton_Click" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="img\play.png" />
             </Button.Background>
         </Button>
-        <Button x:Name="infoButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="105" Height="105" Click="infoButton_Click">
+        <Button x:Name="infoButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="105" Height="105" Click="infoButton_Click" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="img\info.png" />
             </Button.Background>
         </Button>
-
-        <TextBox x:Name="headerTextBox" HorizontalAlignment="Left" Height="19" Margin="153,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1631"/>
-
+        <TextBox x:Name="headerTextBox"
+                 Height="105" Margin="105,0,105,1" Template="{StaticResource TextBoxBaseControlTemplate}"
+                 Text="Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба"
+                 Width="1420" FontSize="24" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFFDFDFD" Foreground="Black">
+        </TextBox>
+        
     </Grid>
 </UserControl>
