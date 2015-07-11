@@ -5,8 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="menuVideoPlayer.controls.MenuItemControl" 
              mc:Ignorable="d" 
-             d:DesignHeight="106" d:DesignWidth="1080" VerticalAlignment="Top">
+             d:DesignHeight="106" Width="1920" VerticalAlignment="Top" Opacity="0">
     <Grid>
+
         <Button x:Name="playButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="105" Click="playButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="img\play.png" />
@@ -18,7 +19,7 @@
             </Button.Background>
         </Button>
 
-        <TextBox x:Name="headerTextBox" HorizontalAlignment="Left" Height="23" Margin="146,29,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="803"/>
+        <TextBox x:Name="headerTextBox" HorizontalAlignment="Left" Height="19" Margin="153,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1631"/>
 
     </Grid>
 </UserControl>

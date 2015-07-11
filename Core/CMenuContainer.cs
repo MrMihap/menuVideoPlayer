@@ -11,6 +11,7 @@ namespace Core
     public class CMenuContainer
     {
       public static List<MenuItem> videoCollection = new List<MenuItem>();
+      public static string Name;
       public static int AddItem(MenuItem item)
       {
         item.ID = videoCollection.Count();

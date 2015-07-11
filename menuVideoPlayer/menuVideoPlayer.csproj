@@ -122,7 +122,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="controls\img\background.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="controls\img\info.png" />
     <Resource Include="controls\img\play.png" />

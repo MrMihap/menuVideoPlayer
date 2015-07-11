@@ -4,6 +4,9 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen" 
         Title="MainWindow" Height="364" Width="1920" Loaded="Window_Loaded">
+    <Window.Background>
+        <ImageBrush ImageSource="controls\img\background.png" Stretch="Uniform"></ImageBrush>
+    </Window.Background>
     <Grid>
         <ListBox Name="menuItemsListBox">
 

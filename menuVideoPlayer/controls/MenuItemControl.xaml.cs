@@ -42,7 +42,6 @@ namespace menuVideoPlayer.controls
       ID = menuData.ID;
       Info = menuData.Info;
       Header = menuData.Header;
-      //headerTextBox.Text = Header;
     }
 
     private void playButton_Click(object sender, RoutedEventArgs e)
