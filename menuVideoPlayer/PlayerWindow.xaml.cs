@@ -68,7 +68,6 @@ namespace menuVideoPlayer
     //Продолжение после окончания
     private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
     {
-      currentVideoID = Core.CMenuContainer.videoCollection.Count - 1;
       mePlayer.Position = TimeSpan.FromMilliseconds(1);
     }
 

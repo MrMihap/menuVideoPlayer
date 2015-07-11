@@ -50,5 +50,10 @@ namespace menuVideoPlayer.controls
       CCommndsFlowController.SendPlayID(this.ID);
     }
 
+    private void infoButton_Click(object sender, RoutedEventArgs e)
+    {
+      MessageBox.Show(this.Info);
+    }
+
   }
 }
