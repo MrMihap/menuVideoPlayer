@@ -31,6 +31,9 @@ namespace menuVideoPlayer
       InitializeComponent();
 
 
+      //this.Topmost = true;
+      this.WindowStartupLocation = System.Windows.WindowStartupLocation.Manual;
+
       // создаем
       playerWindow = new PlayerWindow();
       if (Screen.AllScreens.Count() > 1)
