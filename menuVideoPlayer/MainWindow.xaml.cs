@@ -61,5 +61,10 @@ namespace menuVideoPlayer
       this.WindowState = System.Windows.WindowState.Maximized;
       playerWindow.Show();
     }
+
+    private void OnManipulationBoundaryFeedback(object sender, ManipulationBoundaryFeedbackEventArgs e)
+    {
+      e.Handled = true;
+    }
   }
 }

@@ -7,7 +7,7 @@
         <ImageBrush ImageSource="controls/img/background.png" />
     </Window.Background>
     <Grid>
-        <ListBox Name="menuItemsListBox" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="70,0">
+        <ListBox Name="menuItemsListBox" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="70,0" ManipulationBoundaryFeedback="OnManipulationBoundaryFeedback">
 
         </ListBox>
     </Grid>
