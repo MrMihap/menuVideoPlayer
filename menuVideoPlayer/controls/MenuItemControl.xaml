@@ -28,7 +28,7 @@
         </Button>
         <TextBox x:Name="headerTextBox"
                  Height="105" Margin="130,0,130,1" Template="{StaticResource TextBoxBaseControlTemplate}" IsReadOnly="True" 
-                 VerticalScrollBarVisibility="Auto"
+                 VerticalScrollBarVisibility="Disabled"
                  Padding="20, 0, 0, 0" FontSize="40" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFFDFDFD" Foreground="Black" FontFamily="Segoe UI Symbol"/>
       
     </Grid>
