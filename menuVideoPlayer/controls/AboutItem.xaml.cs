@@ -34,5 +34,13 @@ namespace menuVideoPlayer.controls
         {
           this.Close();
         }
+
+        private void Info_Loaded(object sender, RoutedEventArgs e)
+        {
+          this.WindowState = System.Windows.WindowState.Maximized;
+        }
+
     }
+
+      
 }
