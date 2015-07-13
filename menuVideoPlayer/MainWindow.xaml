@@ -14,7 +14,9 @@
         <SolidColorBrush x:Key="SelectedBackgroundBrush" Color="Transparent" />
         <SolidColorBrush x:Key="SelectedForegroundBrush" Color="Gray" />
         <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#FFFFFF" />
-        <ImageBrush x:Key="NormalBrush" ImageSource="controls/img/info.png"  />
+        <ImageBrush x:Key="NormalBrush" ImageSource="controls/img/info.png" />
+        <ImageBrush x:Key="NormalBrushTop" ImageSource="controls/img/top.png" />
+        <ImageBrush x:Key="NormalBrushBottom" ImageSource="controls/img/bottom.png"  />
         <SolidColorBrush x:Key="NormalBorderBrush" Color="#ffffff" />
         <SolidColorBrush x:Key="HorizontalNormalBrush" Color="Transparent" />
         <SolidColorBrush x:Key="HorizontalNormalBorderBrush" Color="#ffffff" />
@@ -59,7 +61,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type RepeatButton}">
-                        <Border Name="Border"  Margin="1" CornerRadius="2" Background="{StaticResource NormalBrush}" BorderBrush="{StaticResource NormalBorderBrush}" BorderThickness="1">
+                        <Border Name="Border"  Margin="1" CornerRadius="2" Background="{StaticResource NormalBrushTop}" BorderBrush="{StaticResource NormalBorderBrush}" BorderThickness="1">
                             <Path HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{StaticResource GlyphBrush}" Data="{Binding Path=Content,  RelativeSource={RelativeSource TemplatedParent}}" />
                         </Border>
                         <ControlTemplate.Triggers>
@@ -115,12 +117,12 @@
             TargetType="{x:Type ScrollBar}">
             <Grid >
                 <Grid.RowDefinitions>
-                    <RowDefinition MaxHeight="54"/>
+                    <RowDefinition MaxHeight="106"/>
                     <RowDefinition Height="0.00001*"/>
-                    <RowDefinition MaxHeight="54"/>
+                    <RowDefinition MaxHeight="106"/>
                 </Grid.RowDefinitions>
                 <Border Grid.RowSpan="3"  CornerRadius="2" Background="#F0F0F0" />
-                <RepeatButton Grid.Row="0" Style="{StaticResource ScrollBarLineButton}" Height="54"  Command="ScrollBar.LineUpCommand" Content="M 0 4 L 8 4 L 4 0 Z" />
+                <RepeatButton Grid.Row="0" Style="{StaticResource ScrollBarLineButton}" Height="106"  Command="ScrollBar.LineUpCommand" Content="M 0 4 L 8 4 L 4 0 Z" />
                 <Track  Name="PART_Track" Grid.Row="1" IsDirectionReversed="true">
                     <Track.DecreaseRepeatButton>
                         <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="ScrollBar.PageUpCommand" />
@@ -134,8 +136,8 @@
           Command="ScrollBar.PageDownCommand" />
                     </Track.IncreaseRepeatButton>
                 </Track>
-                <RepeatButton Grid.Row="3"  Style="{StaticResource ScrollBarLineButton}" Height="54"  Command="ScrollBar.LineDownCommand" Content="M 0 0 L 4 4 L 8 0 Z"/>
-                
+                <RepeatButton Grid.Row="3"  Style="{StaticResource ScrollBarLineButton}" Height="106"  Command="ScrollBar.LineDownCommand" Content="M 0 0 L 4 4 L 8 0 Z"/>
+
             </Grid>
         </ControlTemplate>
         <!-- HorizontalScrollBar Template using the previously created Templates -->
@@ -232,7 +234,11 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <ScrollViewer  RenderTransformOrigin="0.5, 0.5" Margin="0,0,0,0"  Width="Auto" Style="{StaticResource FavsScrollViewer}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="71*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer  RenderTransformOrigin="0.5, 0.5" Margin="0,0,0,0"  Width="Auto" Style="{StaticResource FavsScrollViewer}" Grid.Row="1">
             <ListBox Name="menuItemsListBox" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="70,0" ManipulationBoundaryFeedback="OnManipulationBoundaryFeedback">
 
             </ListBox>
