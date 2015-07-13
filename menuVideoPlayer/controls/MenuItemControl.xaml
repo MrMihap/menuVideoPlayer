@@ -27,8 +27,9 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="headerTextBox"
-                 Height="105" Margin="130,0,130,1" Template="{StaticResource TextBoxBaseControlTemplate}"
-                 Text="Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба" FontSize="24" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFFDFDFD" Foreground="Black"/>
+                 Height="105" Margin="130,0,130,1" Template="{StaticResource TextBoxBaseControlTemplate}" IsEnabled="False"
+                 Padding="20, 0, 0, 0"
+                 Text="Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба  Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба  Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба  Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба" FontSize="24" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFFDFDFD" Foreground="Black"/>
 
     </Grid>
 </UserControl>

@@ -56,6 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="controls\AboutItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="controls\MenuItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -69,6 +73,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="CCommndFlowController.cs" />
+    <Compile Include="controls\AboutItem.xaml.cs">
+      <DependentUpon>AboutItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="controls\MenuItemControl.xaml.cs">
       <DependentUpon>MenuItemControl.xaml</DependentUpon>
     </Compile>
