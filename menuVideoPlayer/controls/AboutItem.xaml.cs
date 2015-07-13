@@ -23,5 +23,16 @@ namespace menuVideoPlayer.controls
         {
             InitializeComponent();
         }
+        public AboutItem(string Header, string About)
+        {
+          InitializeComponent();
+          this.About.Text = About;
+          this.Header.Content = Header;
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+          this.Close();
+        }
     }
 }

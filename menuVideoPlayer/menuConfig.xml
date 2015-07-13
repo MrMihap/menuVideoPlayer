@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <config>
-  <exhibitionName>
-    Музей Музеевич Музеев
-  </exhibitionName>
+  <exhibitionName>Музей Музеевич Музеев</exhibitionName>
   <menu>
     <menuItem>
       <header> Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying Sexy lady comes crying</header>
@@ -10,7 +8,8 @@
       <videoPath>video1.mp4</videoPath>
     </menuItem>
     <menuItem>
-      <header> Hard triple iPhonization Hard triple iPhonization Hard triple iPhonization Hard triple iPhonization Hard triple iPhonization</header>
+      <header> Hard triple iPhonization Hard triple iPhonization Hard triple 
+      iPhonization Hard triple iPhonization Hard triple iPhonization</header>
       <info>iPhone shit shit shit shit shit shit shit shit</info>
       <videoPath>video2.mp4</videoPath>
     </menuItem>
@@ -19,12 +18,12 @@
       <info>iPhone shit shit shit shit shit shit shit shit</info>
       <videoPath>video3.mp4</videoPath>
     </menuItem>
-	    <menuItem>
+	  <menuItem>
       <header> VeryWOWdd video</header>
       <info>iPhone shit shit shit shit shit shit shit shit</info>
       <videoPath>video4.mp4</videoPath>
     </menuItem>
-	    <menuItem>
+	  <menuItem>
       <header> Very gooWOWOWOWOWOWd video</header>
       <info>iPhone shit shit shit shit shit shit shit shit</info>
       <videoPath>video5.mp4</videoPath>

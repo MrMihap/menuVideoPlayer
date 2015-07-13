@@ -8,9 +8,9 @@
              d:DesignHeight="106" Width="1630" VerticalAlignment="Top" Margin="0,0,0,40">
     <UserControl.Resources>
         <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
-            <Border Background="{TemplateBinding Background}" 
-                x:Name="Bd" BorderBrush="Black"
-                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="30">
+            <Border Background="White" 
+                x:Name="Bd" BorderBrush="White"
+                BorderThickness="0"  CornerRadius="30">
                 <ScrollViewer x:Name="PART_ContentHost"/>
             </Border>
         </ControlTemplate>
@@ -27,9 +27,9 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="headerTextBox"
-                 Height="105" Margin="130,0,130,1" Template="{StaticResource TextBoxBaseControlTemplate}" IsEnabled="False"
-                 Padding="20, 0, 0, 0"
-                 Text="Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба  Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба  Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба  Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба Рыба" FontSize="24" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFFDFDFD" Foreground="Black"/>
-
+                 Height="105" Margin="130,0,130,1" Template="{StaticResource TextBoxBaseControlTemplate}" IsReadOnly="True" 
+                 VerticalScrollBarVisibility="Auto"
+                 Padding="20, 0, 0, 0" FontSize="40" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFFDFDFD" Foreground="Black" FontFamily="Segoe UI Symbol"/>
+      
     </Grid>
 </UserControl>

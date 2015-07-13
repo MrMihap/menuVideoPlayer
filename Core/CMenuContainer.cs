@@ -26,7 +26,7 @@ namespace Core
       {
         XmlDocument doc = new XmlDocument();
         doc.Load(Path);
-
+        Name = doc.GetElementsByTagName("exhibitionName")[0].InnerText;
         foreach (XmlElement elem in doc.GetElementsByTagName("menuItem"))
         {
           MenuItem menuItem = new MenuItem();
