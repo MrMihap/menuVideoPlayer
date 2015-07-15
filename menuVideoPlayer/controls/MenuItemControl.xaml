@@ -16,12 +16,12 @@
         </ControlTemplate>
     </UserControl.Resources>
     <Grid>
-        <Button x:Name="playButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="105" Click="playButton_Click" BorderBrush="{x:Null}">
+        <Button x:Name="playButton" HorizontalAlignment="Left" VerticalAlignment="Center" Width="105" Height="105" Click="playButton_Click" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="img\play.png" />
             </Button.Background>
         </Button>
-        <Button x:Name="infoButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="105" Height="105" Click="infoButton_Click" BorderBrush="{x:Null}">
+        <Button x:Name="infoButton" HorizontalAlignment="Right" VerticalAlignment="Center" Width="105" Height="105" Click="infoButton_Click" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="img\info.png" />
             </Button.Background>
@@ -29,7 +29,7 @@
         <TextBox x:Name="headerTextBox"
                  Height="105" Margin="130,0,130,1" Template="{StaticResource TextBoxBaseControlTemplate}" IsReadOnly="True" 
                  VerticalScrollBarVisibility="Disabled"
-                 Padding="20, 0, 0, 0" FontSize="40" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFFDFDFD" Foreground="Black" FontFamily="Segoe UI Symbol"/>
+                 Padding="20, 0, 0, 0" FontSize="40" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFFDFDFD" Foreground="Black" FontFamily="Segoe UI Symbol" VerticalAlignment="Center"/>
       
     </Grid>
 </UserControl>

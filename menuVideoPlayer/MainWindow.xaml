@@ -277,7 +277,7 @@
             Value="{TemplateBinding VerticalOffset}"
             Maximum="{TemplateBinding ScrollableHeight}"
             ViewportSize="{TemplateBinding ViewportHeight}"
-            Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" Grid.ColumnSpan="2" Margin="1794.765,-10,10,10"/>
+            Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" Grid.ColumnSpan="2" Margin="1770.765,-10,34,10"/>
                             <ScrollBar Name="PART_HorizontalScrollBar"
             Orientation="Horizontal"
             Grid.Row="1"
@@ -298,8 +298,8 @@
             <RowDefinition Height="200"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ScrollViewer  RenderTransformOrigin="0.5, 0.5" Margin="10,10,-10,-10"  Width="Auto" Style="{StaticResource FavsScrollViewer}" Grid.Row="1">
-            <ListView Name="menuItemsListBox" ItemContainerStyle="{StaticResource LvItemStyle}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="70,0" ManipulationBoundaryFeedback="OnManipulationBoundaryFeedback">
+        <ScrollViewer  RenderTransformOrigin="0.5, 0.5" Margin="10,10,-10,20"  Width="Auto" Style="{StaticResource FavsScrollViewer}" Grid.Row="1">
+            <ListView Name="menuItemsListBox" ItemContainerStyle="{StaticResource LvItemStyle}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="70,0,150,0" ManipulationBoundaryFeedback="OnManipulationBoundaryFeedback">
                
             </ListView>
         </ScrollViewer>
