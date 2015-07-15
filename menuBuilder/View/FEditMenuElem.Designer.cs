@@ -34,10 +34,9 @@
       this.textBox1 = new System.Windows.Forms.TextBox();
       this.textBox2 = new System.Windows.Forms.TextBox();
       this.textBox3 = new System.Windows.Forms.TextBox();
-      this.button2 = new System.Windows.Forms.Button();
-      this.button1 = new System.Windows.Forms.Button();
-      this.button3 = new System.Windows.Forms.Button();
-      this.button4 = new System.Windows.Forms.Button();
+      this.OpenFileButton = new System.Windows.Forms.Button();
+      this.Save = new System.Windows.Forms.Button();
+      this.Cancel = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // label1
@@ -90,57 +89,48 @@
       this.textBox3.Size = new System.Drawing.Size(412, 171);
       this.textBox3.TabIndex = 3;
       // 
-      // button2
+      // OpenFileButton
       // 
-      this.button2.Location = new System.Drawing.Point(61, 36);
-      this.button2.Name = "button2";
-      this.button2.Size = new System.Drawing.Size(75, 23);
-      this.button2.TabIndex = 0;
-      this.button2.Text = "Открыть";
-      this.button2.UseVisualStyleBackColor = true;
+      this.OpenFileButton.Location = new System.Drawing.Point(61, 36);
+      this.OpenFileButton.Name = "OpenFileButton";
+      this.OpenFileButton.Size = new System.Drawing.Size(75, 23);
+      this.OpenFileButton.TabIndex = 0;
+      this.OpenFileButton.Text = "Открыть";
+      this.OpenFileButton.UseVisualStyleBackColor = true;
+      this.OpenFileButton.Click += new System.EventHandler(this.OpenFileButton_Click);
       // 
-      // button1
+      // Save
       // 
-      this.button1.Location = new System.Drawing.Point(142, 243);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(75, 23);
-      this.button1.TabIndex = 4;
-      this.button1.Text = "Сохранить";
-      this.button1.UseVisualStyleBackColor = true;
+      this.Save.Location = new System.Drawing.Point(16, 183);
+      this.Save.Name = "Save";
+      this.Save.Size = new System.Drawing.Size(75, 23);
+      this.Save.TabIndex = 4;
+      this.Save.Text = "Сохранить";
+      this.Save.UseVisualStyleBackColor = true;
       // 
-      // button3
+      // Cancel
       // 
-      this.button3.Location = new System.Drawing.Point(305, 242);
-      this.button3.Name = "button3";
-      this.button3.Size = new System.Drawing.Size(75, 23);
-      this.button3.TabIndex = 4;
-      this.button3.Text = "Отмена";
-      this.button3.UseVisualStyleBackColor = true;
-      // 
-      // button4
-      // 
-      this.button4.Location = new System.Drawing.Point(479, 243);
-      this.button4.Name = "button4";
-      this.button4.Size = new System.Drawing.Size(75, 23);
-      this.button4.TabIndex = 4;
-      this.button4.Text = "Выход";
-      this.button4.UseVisualStyleBackColor = true;
+      this.Cancel.Location = new System.Drawing.Point(16, 212);
+      this.Cancel.Name = "Cancel";
+      this.Cancel.Size = new System.Drawing.Size(75, 23);
+      this.Cancel.TabIndex = 4;
+      this.Cancel.Text = "Отмена";
+      this.Cancel.UseVisualStyleBackColor = true;
       // 
       // FEditMenuElem
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(558, 269);
-      this.Controls.Add(this.button4);
-      this.Controls.Add(this.button3);
-      this.Controls.Add(this.button1);
+      this.ClientSize = new System.Drawing.Size(558, 241);
+      this.Controls.Add(this.Cancel);
+      this.Controls.Add(this.Save);
       this.Controls.Add(this.textBox3);
       this.Controls.Add(this.textBox2);
       this.Controls.Add(this.textBox1);
       this.Controls.Add(this.label3);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.label1);
-      this.Controls.Add(this.button2);
+      this.Controls.Add(this.OpenFileButton);
       this.Name = "FEditMenuElem";
       this.Text = "FEditMenuElem";
       this.ResumeLayout(false);
@@ -156,9 +146,8 @@
     private System.Windows.Forms.TextBox textBox1;
     private System.Windows.Forms.TextBox textBox2;
     private System.Windows.Forms.TextBox textBox3;
-    private System.Windows.Forms.Button button2;
-    private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.Button button3;
-    private System.Windows.Forms.Button button4;
+    private System.Windows.Forms.Button OpenFileButton;
+    private System.Windows.Forms.Button Save;
+    private System.Windows.Forms.Button Cancel;
   }
 }
