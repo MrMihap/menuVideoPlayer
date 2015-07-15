@@ -66,6 +66,8 @@ namespace menuVideoPlayer
       playerWindow.Close();
     }
 
+
+
     void playerWindow_Closed(object sender, EventArgs e)
     {
       if (!IsClosed) this.Close();
