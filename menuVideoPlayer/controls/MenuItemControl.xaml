@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="menuVideoPlayer.controls.MenuItemControl" 
              mc:Ignorable="d" 
-             d:DesignHeight="106" Width="1630" VerticalAlignment="Top" Margin="0,0,0,40">
+             d:DesignHeight="106" Width="1680" VerticalAlignment="Top" Margin="0,0,0,40">
     <UserControl.Resources>
         <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type Label}">
             <Border Background="#FFE7EBEE" 
@@ -27,7 +27,7 @@
         </Button>
         <Border BorderBrush="#FFE7EBEE" Background="#FFE7EBEE" BorderThickness="1" Height="105" Margin="130,0" Name="Border1" VerticalAlignment="Top"  CornerRadius="20">
             <Label x:Name="headerTextBox"  VerticalAlignment="Center"
-                 Padding="10, 0, 0, 0" FontSize="48"  BorderBrush="{x:Null}" Background="Transparent" Foreground="Black" Content="Красивый русский текст" FontFamily="Arial Narrow"/>
+                 Padding="10, 0, 0, 0" FontSize="40"  BorderBrush="{x:Null}" Background="Transparent" Foreground="Black" Content="Кристаллы кальцита-фантомы светло-зеленого цвета на вмещающей породе" FontFamily="Calibri"/>
         </Border>
 
     </Grid>
