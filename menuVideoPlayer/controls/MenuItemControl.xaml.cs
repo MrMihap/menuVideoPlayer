@@ -30,7 +30,7 @@ namespace menuVideoPlayer.controls
       get { return _Header;}
       set 
       {
-        headerTextBox.Text = value;
+        headerTextBox.Content = value;
         _Header = value;
       }
     }
