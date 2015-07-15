@@ -31,9 +31,9 @@
       this.label1 = new System.Windows.Forms.Label();
       this.label2 = new System.Windows.Forms.Label();
       this.label3 = new System.Windows.Forms.Label();
-      this.textBox1 = new System.Windows.Forms.TextBox();
-      this.textBox2 = new System.Windows.Forms.TextBox();
-      this.textBox3 = new System.Windows.Forms.TextBox();
+      this.Header = new System.Windows.Forms.TextBox();
+      this.filePath = new System.Windows.Forms.TextBox();
+      this.Info = new System.Windows.Forms.TextBox();
       this.OpenFileButton = new System.Windows.Forms.Button();
       this.Save = new System.Windows.Forms.Button();
       this.Cancel = new System.Windows.Forms.Button();
@@ -66,32 +66,33 @@
       this.label3.TabIndex = 2;
       this.label3.Text = "Файл";
       // 
-      // textBox1
+      // Header
       // 
-      this.textBox1.Location = new System.Drawing.Point(142, 13);
-      this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(412, 20);
-      this.textBox1.TabIndex = 3;
+      this.Header.Location = new System.Drawing.Point(97, 13);
+      this.Header.Name = "Header";
+      this.Header.Size = new System.Drawing.Size(412, 20);
+      this.Header.TabIndex = 3;
       // 
-      // textBox2
+      // filePath
       // 
-      this.textBox2.Location = new System.Drawing.Point(142, 39);
-      this.textBox2.Name = "textBox2";
-      this.textBox2.Size = new System.Drawing.Size(412, 20);
-      this.textBox2.TabIndex = 3;
+      this.filePath.Location = new System.Drawing.Point(178, 39);
+      this.filePath.Name = "filePath";
+      this.filePath.ReadOnly = true;
+      this.filePath.Size = new System.Drawing.Size(331, 20);
+      this.filePath.TabIndex = 3;
       // 
-      // textBox3
+      // Info
       // 
-      this.textBox3.Location = new System.Drawing.Point(142, 65);
-      this.textBox3.Multiline = true;
-      this.textBox3.Name = "textBox3";
-      this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-      this.textBox3.Size = new System.Drawing.Size(412, 171);
-      this.textBox3.TabIndex = 3;
+      this.Info.Location = new System.Drawing.Point(97, 65);
+      this.Info.Multiline = true;
+      this.Info.Name = "Info";
+      this.Info.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+      this.Info.Size = new System.Drawing.Size(412, 312);
+      this.Info.TabIndex = 3;
       // 
       // OpenFileButton
       // 
-      this.OpenFileButton.Location = new System.Drawing.Point(61, 36);
+      this.OpenFileButton.Location = new System.Drawing.Point(97, 37);
       this.OpenFileButton.Name = "OpenFileButton";
       this.OpenFileButton.Size = new System.Drawing.Size(75, 23);
       this.OpenFileButton.TabIndex = 0;
@@ -101,16 +102,19 @@
       // 
       // Save
       // 
-      this.Save.Location = new System.Drawing.Point(16, 183);
+      this.Save.DialogResult = System.Windows.Forms.DialogResult.OK;
+      this.Save.Location = new System.Drawing.Point(12, 334);
       this.Save.Name = "Save";
       this.Save.Size = new System.Drawing.Size(75, 23);
       this.Save.TabIndex = 4;
       this.Save.Text = "Сохранить";
       this.Save.UseVisualStyleBackColor = true;
+      this.Save.Click += new System.EventHandler(this.Save_Click);
       // 
       // Cancel
       // 
-      this.Cancel.Location = new System.Drawing.Point(16, 212);
+      this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+      this.Cancel.Location = new System.Drawing.Point(12, 363);
       this.Cancel.Name = "Cancel";
       this.Cancel.Size = new System.Drawing.Size(75, 23);
       this.Cancel.TabIndex = 4;
@@ -121,12 +125,12 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(558, 241);
+      this.ClientSize = new System.Drawing.Size(512, 389);
       this.Controls.Add(this.Cancel);
       this.Controls.Add(this.Save);
-      this.Controls.Add(this.textBox3);
-      this.Controls.Add(this.textBox2);
-      this.Controls.Add(this.textBox1);
+      this.Controls.Add(this.Info);
+      this.Controls.Add(this.filePath);
+      this.Controls.Add(this.Header);
       this.Controls.Add(this.label3);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.label1);
@@ -143,9 +147,9 @@
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.TextBox textBox1;
-    private System.Windows.Forms.TextBox textBox2;
-    private System.Windows.Forms.TextBox textBox3;
+    private System.Windows.Forms.TextBox Header;
+    private System.Windows.Forms.TextBox filePath;
+    private System.Windows.Forms.TextBox Info;
     private System.Windows.Forms.Button OpenFileButton;
     private System.Windows.Forms.Button Save;
     private System.Windows.Forms.Button Cancel;

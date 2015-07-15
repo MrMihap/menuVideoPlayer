@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{D9B96D20-CC15-4E16-9EB9-BD14857BD514}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "menuVideoPlayer", "menuVideoPlayer\menuVideoPlayer.csproj", "{2665F4F3-4C26-4F72-BAA7-9794070FEA79}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D1E1C1AD-468A-4A68-93CC-448EB63A9118} = {D1E1C1AD-468A-4A68-93CC-448EB63A9118}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "menuBuilder", "menuBuilder\menuBuilder.csproj", "{D1E1C1AD-468A-4A68-93CC-448EB63A9118}"
 EndProject

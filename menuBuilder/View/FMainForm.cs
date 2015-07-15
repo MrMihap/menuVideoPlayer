@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml;
+using menuBuilder.View;
 namespace menuBuilder
 {
   public partial class FMainForm : Form
   {
-    private XmlDocument xmlDoc;
     private AppController appController = new AppController();
     public FMainForm()
     {
@@ -49,9 +49,16 @@ namespace menuBuilder
         Core.MenuItem menuItem = appController.menuItemsCollection[i];
         MenuItemControl itemControll = new MenuItemControl(menuItem);
         itemControll.OnMenuItemDel += itemControll_OnMenuItemDel;
+        itemControll.OnMenuItemChange += itemControll_OnMenuItemChange;
         itemControll.Location = new Point(0, (itemControll.Height + 15) * i);
         menuElemsPanel.Controls.Add(itemControll);
       }
+    }
+
+    void itemControll_OnMenuItemChange(object sender, Core.MenuItem value)
+    {
+      appController.EditElementByID(value.ID, value);
+      this.UpdateItemsList();
     }
 
     void itemControll_OnMenuItemDel(object sender, int delID)
@@ -66,6 +73,42 @@ namespace menuBuilder
         appController.LoadFromFile("menuConfig.xml");
         this.UpdateItemsList();
       }
+    }
+
+    private void CreateButton_Click(object sender, EventArgs e)
+    {
+      appController = new AppController();
+      this.UpdateItemsList();
+    }
+
+    private void SaveButton_Click(object sender, EventArgs e)
+    {
+      appController.saveFile("menuConfig.xml");
+
+    }
+
+    private void addElem_Click(object sender, EventArgs e)
+    {
+      FEditMenuElem form = new FEditMenuElem();
+      switch (form.ShowDialog())
+      {
+        case DialogResult.OK:
+          appController.AddItem(form.menuItem);
+          this.UpdateItemsList();
+          break;
+        case DialogResult.Cancel:
+          break;
+      }
+    }
+
+    private void groupBox2_Enter(object sender, EventArgs e)
+    {
+
+    }
+
+    private void HeaderText_TextChanged(object sender, EventArgs e)
+    {
+      appController.MainHeader = HeaderText.Text;
     }
   }
 }

@@ -35,6 +35,7 @@
       this.Header = new System.Windows.Forms.TextBox();
       this.Info = new System.Windows.Forms.TextBox();
       this.FilePath = new System.Windows.Forms.TextBox();
+      this.EditButton = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // remove
@@ -98,11 +99,22 @@
       this.FilePath.Size = new System.Drawing.Size(464, 20);
       this.FilePath.TabIndex = 2;
       // 
+      // EditButton
+      // 
+      this.EditButton.Location = new System.Drawing.Point(720, 4);
+      this.EditButton.Name = "EditButton";
+      this.EditButton.Size = new System.Drawing.Size(109, 66);
+      this.EditButton.TabIndex = 3;
+      this.EditButton.Text = "Изменить";
+      this.EditButton.UseVisualStyleBackColor = true;
+      this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+      // 
       // MenuItemControl
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.Controls.Add(this.EditButton);
       this.Controls.Add(this.FilePath);
       this.Controls.Add(this.Info);
       this.Controls.Add(this.Header);
@@ -111,7 +123,7 @@
       this.Controls.Add(this.label1);
       this.Controls.Add(this.remove);
       this.Name = "MenuItemControl";
-      this.Size = new System.Drawing.Size(702, 73);
+      this.Size = new System.Drawing.Size(852, 73);
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -126,5 +138,6 @@
     private System.Windows.Forms.TextBox Header;
     private System.Windows.Forms.TextBox Info;
     private System.Windows.Forms.TextBox FilePath;
+    private System.Windows.Forms.Button EditButton;
   }
 }

@@ -19,24 +19,41 @@ namespace menuBuilder
     }
     public void AddItem(string Header, string info, string filePath)
     {
+      Core.MenuItem item = new MenuItem(Header, info, filePath); 
 
     }
-
+    public void AddItem(Core.MenuItem item)
+    {
+      menuItemsCollection.Add(item);
+      this.ReIndexItems();
+    }
     public void saveFile(string filePath)
     {
       doc = new XmlDocument();
-      XmlElement config = doc.CreateElement("config");
-      ((XmlElement)config.AppendChild(doc.CreateElement("exhibitionName"))).Value = MainHeader;
-      XmlElement menu =  (XmlElement)config.AppendChild(doc.CreateElement("exhibitionName"));
+      XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
+
+      XmlElement root = doc.DocumentElement;
+      doc.InsertBefore(xmlDeclaration, root);
+
+      XmlElement config = doc.CreateElement(string.Empty, "config", string.Empty);
+      doc.AppendChild(config);
+
+      XmlText mainHeader = doc.CreateTextNode(MainHeader);
+
+      XmlNode exhibName = doc.CreateElement("exhibitionName");
+      exhibName.AppendChild(mainHeader);
+      config.AppendChild(exhibName);
+
+      XmlElement menu =  (XmlElement)config.AppendChild(doc.CreateElement("menu"));
       foreach (MenuItem item in menuItemsCollection)
       {
         XmlElement menuitem = (XmlElement) menu.AppendChild(doc.CreateElement("menuItem"));
-        ((XmlElement)menuitem.AppendChild(doc.CreateElement("header"))).Value = item.Header;
-        ((XmlElement)menuitem.AppendChild(doc.CreateElement("info"))).Value = item.Header;
-        ((XmlElement)menuitem.AppendChild(doc.CreateElement("videoPath"))).Value = item.Header;
+        ((XmlElement)menuitem.AppendChild(doc.CreateElement("header"))).AppendChild(doc.CreateTextNode(item.Header));
+        ((XmlElement)menuitem.AppendChild(doc.CreateElement("info"))).AppendChild(doc.CreateTextNode(item.Info));
+        ((XmlElement)menuitem.AppendChild(doc.CreateElement("videoPath"))).AppendChild(doc.CreateTextNode(item.VideoPath));
       }
-      doc.AppendChild(config);
-
+      
+      doc.Save(filePath);
     }
 
     public void RemoveElemByID(int ID)
@@ -44,7 +61,13 @@ namespace menuBuilder
       menuItemsCollection.Remove(menuItemsCollection.Where(x => x.ID == ID).First());
       ReIndexItems();
     }
-    public void ReIndexItems()
+    public void EditElementByID(int ID, MenuItem value)
+    {
+      menuItemsCollection.Where(x => x.ID == ID).First().Info = value.Info;
+      menuItemsCollection.Where(x => x.ID == ID).First().VideoPath = value.VideoPath;
+      menuItemsCollection.Where(x => x.ID == ID).First().Header = value.Header;
+    }
+    private void ReIndexItems()
     {
       for (int i = 0; i < menuItemsCollection.Count; i++)
       {
