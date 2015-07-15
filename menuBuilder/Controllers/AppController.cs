@@ -9,7 +9,6 @@ namespace menuBuilder
 {
   class AppController
   {
-
     XmlDocument doc;
     public List<MenuItem> menuItemsCollection = new List<MenuItem>();
     public string MainHeader;
@@ -22,6 +21,7 @@ namespace menuBuilder
     {
 
     }
+
     public void saveFile(string filePath)
     {
       doc = new XmlDocument();
@@ -38,5 +38,19 @@ namespace menuBuilder
       doc.AppendChild(config);
 
     }
+
+    public void RemoveElemByID(int ID)
+    {
+      menuItemsCollection.Remove(menuItemsCollection.Where(x => x.ID == ID).First());
+      ReIndexItems();
+    }
+    public void ReIndexItems()
+    {
+      for (int i = 0; i < menuItemsCollection.Count; i++)
+      {
+        menuItemsCollection[i].ID = i;
+      }
+    }
   }
 }
+

@@ -42,16 +42,23 @@ namespace menuBuilder
     }
     private void UpdateItemsList()
     {
+      menuElemsPanel.Controls.Clear();
       this.HeaderText.Text = appController.MainHeader;
       for (int i = 0; i < appController.menuItemsCollection.Count; i++ )
       {
         Core.MenuItem menuItem = appController.menuItemsCollection[i];
-        MenuItemControl itemControll = new MenuItemControl(menuItem.Header, menuItem.Info, menuItem.VideoPath);
+        MenuItemControl itemControll = new MenuItemControl(menuItem);
+        itemControll.OnMenuItemDel += itemControll_OnMenuItemDel;
         itemControll.Location = new Point(0, (itemControll.Height + 15) * i);
         menuElemsPanel.Controls.Add(itemControll);
       }
     }
 
+    void itemControll_OnMenuItemDel(object sender, int delID)
+    {
+      appController.RemoveElemByID(delID);
+      this.UpdateItemsList();
+    }
     private void FMainForm_Load(object sender, EventArgs e)
     {
       if (File.Exists("menuConfig.xml"))

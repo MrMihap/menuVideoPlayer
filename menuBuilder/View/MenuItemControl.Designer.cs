@@ -45,6 +45,7 @@
       this.remove.TabIndex = 0;
       this.remove.Text = "Удалить";
       this.remove.UseVisualStyleBackColor = true;
+      this.remove.Click += new System.EventHandler(this.remove_Click);
       // 
       // label1
       // 
