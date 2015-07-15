@@ -1,6 +1,6 @@
 ﻿namespace menuBuilder
 {
-  partial class menuItem
+  partial class MenuItemControl
   {
     /// <summary> 
     /// Требуется переменная конструктора.
@@ -75,6 +75,7 @@
       // 
       // Header
       // 
+      this.Header.Enabled = false;
       this.Header.Location = new System.Drawing.Point(95, 0);
       this.Header.Name = "Header";
       this.Header.Size = new System.Drawing.Size(464, 20);
@@ -82,6 +83,7 @@
       // 
       // Info
       // 
+      this.Info.Enabled = false;
       this.Info.Location = new System.Drawing.Point(95, 26);
       this.Info.Name = "Info";
       this.Info.Size = new System.Drawing.Size(464, 20);
@@ -89,15 +91,17 @@
       // 
       // FilePath
       // 
+      this.FilePath.Enabled = false;
       this.FilePath.Location = new System.Drawing.Point(95, 52);
       this.FilePath.Name = "FilePath";
       this.FilePath.Size = new System.Drawing.Size(464, 20);
       this.FilePath.TabIndex = 2;
       // 
-      // menuItem
+      // MenuItemControl
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.Controls.Add(this.FilePath);
       this.Controls.Add(this.Info);
       this.Controls.Add(this.Header);
@@ -105,8 +109,8 @@
       this.Controls.Add(this.label2);
       this.Controls.Add(this.label1);
       this.Controls.Add(this.remove);
-      this.Name = "menuItem";
-      this.Size = new System.Drawing.Size(704, 75);
+      this.Name = "MenuItemControl";
+      this.Size = new System.Drawing.Size(702, 73);
       this.ResumeLayout(false);
       this.PerformLayout();
 

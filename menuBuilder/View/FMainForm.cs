@@ -34,6 +34,7 @@ namespace menuBuilder
       {
         case System.Windows.Forms.DialogResult.OK:
           appController.LoadFromFile(dialog.FileName);
+          this.UpdateItemsList();
           break;
         case System.Windows.Forms.DialogResult.Cancel:
           break;
@@ -41,10 +42,22 @@ namespace menuBuilder
     }
     private void UpdateItemsList()
     {
-
-      foreach (MenuItem item in appController.menuItemsCollection)
+      this.HeaderText.Text = appController.MainHeader;
+      for (int i = 0; i < appController.menuItemsCollection.Count; i++ )
       {
+        Core.MenuItem menuItem = appController.menuItemsCollection[i];
+        MenuItemControl itemControll = new MenuItemControl(menuItem.Header, menuItem.Info, menuItem.VideoPath);
+        itemControll.Location = new Point(0, (itemControll.Height + 15) * i);
+        menuElemsPanel.Controls.Add(itemControll);
+      }
+    }
 
+    private void FMainForm_Load(object sender, EventArgs e)
+    {
+      if (File.Exists("menuConfig.xml"))
+      {
+        appController.LoadFromFile("menuConfig.xml");
+        this.UpdateItemsList();
       }
     }
   }
