@@ -28,91 +28,190 @@
     /// </summary>
     private void InitializeComponent()
     {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.About = new System.Windows.Forms.ToolStripMenuItem();
-            this.SaveButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.ExitButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.OpenButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.CreateButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+      this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+      this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.About = new System.Windows.Forms.ToolStripMenuItem();
+      this.SaveButton = new System.Windows.Forms.ToolStripMenuItem();
+      this.ExitButton = new System.Windows.Forms.ToolStripMenuItem();
+      this.OpenButton = new System.Windows.Forms.ToolStripMenuItem();
+      this.CreateButton = new System.Windows.Forms.ToolStripMenuItem();
+      this.menuElemsPanel = new System.Windows.Forms.Panel();
+      this.groupBox1 = new System.Windows.Forms.GroupBox();
+      this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.add = new System.Windows.Forms.ToolStripMenuItem();
+      this.groupBox2 = new System.Windows.Forms.GroupBox();
+      this.HeaderText = new System.Windows.Forms.TextBox();
+      this.groupBox3 = new System.Windows.Forms.GroupBox();
+      this.EditorFieled = new System.Windows.Forms.TextBox();
+      this.button1 = new System.Windows.Forms.Button();
+      this.menuStrip1.SuspendLayout();
+      this.groupBox1.SuspendLayout();
+      this.groupBox2.SuspendLayout();
+      this.groupBox3.SuspendLayout();
+      this.SuspendLayout();
+      // 
+      // menuStrip1
+      // 
+      this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
+            this.менюToolStripMenuItem,
             this.оПрограммеToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(897, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // файлToolStripMenuItem
-            // 
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+      this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+      this.menuStrip1.Name = "menuStrip1";
+      this.menuStrip1.Size = new System.Drawing.Size(980, 24);
+      this.menuStrip1.TabIndex = 0;
+      this.menuStrip1.Text = "menuStrip1";
+      // 
+      // файлToolStripMenuItem
+      // 
+      this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CreateButton,
             this.OpenButton,
             this.SaveButton,
             this.ExitButton});
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.файлToolStripMenuItem.Text = "Файл";
-            // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+      this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+      this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+      this.файлToolStripMenuItem.Text = "Файл";
+      // 
+      // оПрограммеToolStripMenuItem
+      // 
+      this.оПрограммеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.About});
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
-            // 
-            // About
-            // 
-            this.About.Name = "About";
-            this.About.Size = new System.Drawing.Size(152, 22);
-            this.About.Text = "справка";
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(152, 22);
-            this.SaveButton.Text = "Сохранить";
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(152, 22);
-            this.ExitButton.Text = "Выход";
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
-            // OpenButton
-            // 
-            this.OpenButton.Name = "OpenButton";
-            this.OpenButton.Size = new System.Drawing.Size(152, 22);
-            this.OpenButton.Text = "Открыть";
-            // 
-            // CreateButton
-            // 
-            this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(152, 22);
-            this.CreateButton.Text = "Создать";
-            // 
-            // FMainForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 363);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FMainForm";
-            this.Text = "Конфигуратор";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+      this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+      this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+      this.оПрограммеToolStripMenuItem.Text = "О программе";
+      // 
+      // About
+      // 
+      this.About.Name = "About";
+      this.About.Size = new System.Drawing.Size(152, 22);
+      this.About.Text = "справка";
+      // 
+      // SaveButton
+      // 
+      this.SaveButton.Name = "SaveButton";
+      this.SaveButton.Size = new System.Drawing.Size(152, 22);
+      this.SaveButton.Text = "Сохранить";
+      // 
+      // ExitButton
+      // 
+      this.ExitButton.Name = "ExitButton";
+      this.ExitButton.Size = new System.Drawing.Size(152, 22);
+      this.ExitButton.Text = "Выход";
+      this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+      // 
+      // OpenButton
+      // 
+      this.OpenButton.Name = "OpenButton";
+      this.OpenButton.Size = new System.Drawing.Size(152, 22);
+      this.OpenButton.Text = "Открыть";
+      this.OpenButton.Click += new System.EventHandler(this.OpenButton_Click);
+      // 
+      // CreateButton
+      // 
+      this.CreateButton.Name = "CreateButton";
+      this.CreateButton.Size = new System.Drawing.Size(152, 22);
+      this.CreateButton.Text = "Создать";
+      // 
+      // menuElemsPanel
+      // 
+      this.menuElemsPanel.AutoScroll = true;
+      this.menuElemsPanel.Location = new System.Drawing.Point(6, 19);
+      this.menuElemsPanel.Name = "menuElemsPanel";
+      this.menuElemsPanel.Size = new System.Drawing.Size(575, 298);
+      this.menuElemsPanel.TabIndex = 1;
+      // 
+      // groupBox1
+      // 
+      this.groupBox1.Controls.Add(this.menuElemsPanel);
+      this.groupBox1.Location = new System.Drawing.Point(13, 95);
+      this.groupBox1.Name = "groupBox1";
+      this.groupBox1.Size = new System.Drawing.Size(587, 256);
+      this.groupBox1.TabIndex = 2;
+      this.groupBox1.TabStop = false;
+      this.groupBox1.Text = "Элементы меню";
+      // 
+      // менюToolStripMenuItem
+      // 
+      this.менюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.add});
+      this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
+      this.менюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+      this.менюToolStripMenuItem.Text = "Меню";
+      // 
+      // add
+      // 
+      this.add.Name = "add";
+      this.add.Size = new System.Drawing.Size(175, 22);
+      this.add.Text = "Добавить элемент";
+      // 
+      // groupBox2
+      // 
+      this.groupBox2.Controls.Add(this.HeaderText);
+      this.groupBox2.Location = new System.Drawing.Point(13, 31);
+      this.groupBox2.Name = "groupBox2";
+      this.groupBox2.Size = new System.Drawing.Size(364, 58);
+      this.groupBox2.TabIndex = 3;
+      this.groupBox2.TabStop = false;
+      this.groupBox2.Text = "Главная надпись";
+      // 
+      // HeaderText
+      // 
+      this.HeaderText.Location = new System.Drawing.Point(6, 19);
+      this.HeaderText.Name = "HeaderText";
+      this.HeaderText.Size = new System.Drawing.Size(350, 20);
+      this.HeaderText.TabIndex = 0;
+      // 
+      // groupBox3
+      // 
+      this.groupBox3.Controls.Add(this.button1);
+      this.groupBox3.Controls.Add(this.EditorFieled);
+      this.groupBox3.Location = new System.Drawing.Point(606, 28);
+      this.groupBox3.Name = "groupBox3";
+      this.groupBox3.Size = new System.Drawing.Size(362, 323);
+      this.groupBox3.TabIndex = 4;
+      this.groupBox3.TabStop = false;
+      this.groupBox3.Text = "Редактор";
+      // 
+      // EditorFieled
+      // 
+      this.EditorFieled.Location = new System.Drawing.Point(7, 20);
+      this.EditorFieled.Multiline = true;
+      this.EditorFieled.Name = "EditorFieled";
+      this.EditorFieled.Size = new System.Drawing.Size(355, 251);
+      this.EditorFieled.TabIndex = 0;
+      // 
+      // button1
+      // 
+      this.button1.Location = new System.Drawing.Point(7, 278);
+      this.button1.Name = "button1";
+      this.button1.Size = new System.Drawing.Size(349, 39);
+      this.button1.TabIndex = 1;
+      this.button1.Text = "Сохранить текст";
+      this.button1.UseVisualStyleBackColor = true;
+      // 
+      // FMainForm
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.ClientSize = new System.Drawing.Size(980, 363);
+      this.Controls.Add(this.groupBox3);
+      this.Controls.Add(this.groupBox2);
+      this.Controls.Add(this.groupBox1);
+      this.Controls.Add(this.menuStrip1);
+      this.MainMenuStrip = this.menuStrip1;
+      this.Name = "FMainForm";
+      this.Text = "Конфигуратор";
+      this.menuStrip1.ResumeLayout(false);
+      this.menuStrip1.PerformLayout();
+      this.groupBox1.ResumeLayout(false);
+      this.groupBox2.ResumeLayout(false);
+      this.groupBox2.PerformLayout();
+      this.groupBox3.ResumeLayout(false);
+      this.groupBox3.PerformLayout();
+      this.ResumeLayout(false);
+      this.PerformLayout();
 
     }
 
@@ -126,6 +225,15 @@
     private System.Windows.Forms.ToolStripMenuItem SaveButton;
     private System.Windows.Forms.ToolStripMenuItem ExitButton;
     private System.Windows.Forms.ToolStripMenuItem CreateButton;
+    private System.Windows.Forms.Panel menuElemsPanel;
+    private System.Windows.Forms.GroupBox groupBox1;
+    private System.Windows.Forms.ToolStripMenuItem менюToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem add;
+    private System.Windows.Forms.GroupBox groupBox2;
+    private System.Windows.Forms.TextBox HeaderText;
+    private System.Windows.Forms.GroupBox groupBox3;
+    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.TextBox EditorFieled;
   }
 }
 

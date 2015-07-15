@@ -50,5 +50,10 @@ namespace Core
           }
         }
       }
+      public static List<MenuItem> BuildCollectionFromPath(string FileName)
+      {
+        LoadFromConfig(FileName);
+        return videoCollection;
+      }
     }
 }

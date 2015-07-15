@@ -44,16 +44,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppController.cs" />
     <Compile Include="FMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FMainForm.Designer.cs">
       <DependentUpon>FMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="menuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menuItem.Designer.cs">
+      <DependentUpon>menuItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FMainForm.resx">
       <DependentUpon>FMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuItem.resx">
+      <DependentUpon>menuItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
