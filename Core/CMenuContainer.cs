@@ -22,11 +22,10 @@ namespace Core
     }
     public static void LoadFromConfig()
     {
-
       LoadFromConfig(Properties.Resources.ConfigPath);
     }
 
-    public static void LoadFromConfig(string Path)
+    public static void LoadFromConfig(string Path, bool ChekFilesExists = true)
     {
       videoCollection data = ReadFromFile(Path);
       videoCollectionData = data.videos;
@@ -43,7 +42,7 @@ namespace Core
          "Для элемента" + menuItem.Header +
           "\nНе удалось найти видео файл :" + menuItem.VideoPath);
       }
-      videoCollectionData = videoCollectionData2;
+      if (ChekFilesExists)videoCollectionData = videoCollectionData2;
       //XmlDocument doc = new XmlDocument();
       //doc.Load(Path);
       //Name = doc.GetElementsByTagName("exhibitionName")[0].InnerText;
@@ -96,9 +95,9 @@ namespace Core
       }
     }
 
-    public static List<MenuItem> BuildCollectionFromPath(string FileName)
+    public static List<MenuItem> BuildCollectionFromPath(string FileName, bool ChekFilesExists = true)
     {
-      LoadFromConfig(FileName);
+      LoadFromConfig(FileName, ChekFilesExists);
       return videoCollectionData;
     }
   }

@@ -14,7 +14,7 @@ namespace menuBuilder
     public string MainHeader;
     public void LoadFromFile(string FilePath)
     {
-      menuItemsCollection = CMenuContainer.BuildCollectionFromPath(FilePath);
+      menuItemsCollection = CMenuContainer.BuildCollectionFromPath(FilePath, false);
       MainHeader = CMenuContainer.Name;
     }
     public void AddItem(string Header, string info, string filePath)
