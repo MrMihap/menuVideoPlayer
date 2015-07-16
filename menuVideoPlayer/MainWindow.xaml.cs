@@ -49,6 +49,7 @@ namespace menuVideoPlayer
         //playerWindow.Left = r2.Left;
       }
       CCommndsFlowController.playerWindow = playerWindow;
+      CCommndsFlowController.menuWindow = this;
       this.Closed += MainWindow_Closed;
       playerWindow.Closed += playerWindow_Closed;
 
@@ -58,6 +59,39 @@ namespace menuVideoPlayer
       {
         menuItemsListBox.Items.Add(new MenuItemControl(menuItem));
       }
+      
+      CCommndsFlowController.SendPlayID(0);
+    }
+
+    public void refresh_Buttons(int id)
+    {
+      foreach (MenuItemControl control in menuItemsListBox.Items)
+        if (control.ID == id)
+        {
+          Uri resourceUri = new Uri("controls/img/play.png", UriKind.Relative);
+          System.Windows.Resources.StreamResourceInfo streamInfo = System.Windows.Application.GetResourceStream(resourceUri);
+
+          BitmapFrame temp = BitmapFrame.Create(streamInfo.Stream);
+          var brush = new ImageBrush();
+          brush.ImageSource = temp;
+          control.playButton.Background = brush;
+
+          control.Border1.Background = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#FFE7EBEE"));
+          control.Border1.BorderBrush = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#FFE7EBEE"));
+        }
+        else
+        {
+          Uri resourceUri = new Uri("controls/img/playinactiv.png", UriKind.Relative);
+          System.Windows.Resources.StreamResourceInfo streamInfo = System.Windows.Application.GetResourceStream(resourceUri);
+
+          BitmapFrame temp = BitmapFrame.Create(streamInfo.Stream);
+          var brush = new ImageBrush();
+          brush.ImageSource = temp;
+
+          control.playButton.Background = brush;
+          control.Border1.Background = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#7B7A7C"));
+          control.Border1.BorderBrush = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#7B7A7C"));
+        }
     }
 
     void MainWindow_Closed(object sender, EventArgs e)
