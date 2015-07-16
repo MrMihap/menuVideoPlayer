@@ -30,9 +30,13 @@ namespace menuBuilder.View
     {
       OpenFileDialog dialog = new OpenFileDialog();
       dialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+     
       switch (dialog.ShowDialog())
       {
         case System.Windows.Forms.DialogResult.OK:
+          if (dialog.FileName.Contains(dialog.InitialDirectory))
+            filePath.Text = dialog.FileName.Replace(dialog.InitialDirectory, "");
+          else
           filePath.Text = dialog.FileName; 
           MessageBox.Show("Файл успешно выбран");
           break;
