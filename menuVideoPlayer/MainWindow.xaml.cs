@@ -76,8 +76,8 @@ namespace menuVideoPlayer
           brush.ImageSource = temp;
           control.playButton.Background = brush;
 
-          control.Border1.Background = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#FFE7EBEE"));
-          control.Border1.BorderBrush = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#FFE7EBEE"));
+          control.Border1.Background = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#FFe7eaeb"));
+          control.Border1.BorderBrush = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#FFe7eaeb"));
         }
         else
         {
@@ -89,8 +89,8 @@ namespace menuVideoPlayer
           brush.ImageSource = temp;
 
           control.playButton.Background = brush;
-          control.Border1.Background = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#7B7A7C"));
-          control.Border1.BorderBrush = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#7B7A7C"));
+          control.Border1.Background = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#FFb2b6b9"));
+          control.Border1.BorderBrush = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#FFb2b6b9"));
         }
     }
 
