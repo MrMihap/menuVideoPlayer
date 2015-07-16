@@ -59,7 +59,7 @@ namespace menuVideoPlayer
       {
         menuItemsListBox.Items.Add(new MenuItemControl(menuItem));
       }
-      
+
       CCommndsFlowController.SendPlayID(0);
     }
 
@@ -93,13 +93,11 @@ namespace menuVideoPlayer
           control.Border1.BorderBrush = new SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#FFb2b6b9"));
         }
     }
-
     void MainWindow_Closed(object sender, EventArgs e)
     {
       IsClosed = true;
       playerWindow.Close();
     }
-
 
 
     void playerWindow_Closed(object sender, EventArgs e)
@@ -111,6 +109,12 @@ namespace menuVideoPlayer
     {
       this.WindowState = System.Windows.WindowState.Maximized;
       playerWindow.Show();
+      /* PURE EVIL POWER CONDENSED HERE*/
+      /* THE MOST TRUE CRUTCH IN THE WORLD I WRITE */
+      if (CMenuContainer.videoCollection.Count <= 6)
+      {
+        scrollView.SetValue(ScrollViewer.VerticalScrollBarVisibilityProperty, ScrollBarVisibility.Disabled);
+      }
     }
 
     private void OnManipulationBoundaryFeedback(object sender, ManipulationBoundaryFeedbackEventArgs e)

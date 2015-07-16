@@ -73,7 +73,7 @@
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Foreground"
-                                Value="{StaticResource DisabledForegroundBrush}"/>
+                                Value="{StaticResource StandardBorderBrush}"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -299,9 +299,9 @@
             <RowDefinition Height="200"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ScrollViewer  RenderTransformOrigin="0, 0" Margin="10,10,-10,20"  Width="Auto" Style="{StaticResource FavsScrollViewer}" Grid.Row="1">
+        <ScrollViewer Name="scrollView"  RenderTransformOrigin="0, 0" Margin="10,10,-10,20"  Width="Auto" Style="{StaticResource FavsScrollViewer}" Grid.Row="1">
             <ListView Name="menuItemsListBox" ItemContainerStyle="{StaticResource LvItemStyle}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="10,0,150,0" ManipulationBoundaryFeedback="OnManipulationBoundaryFeedback" 
-                      ScrollViewer.VerticalScrollBarVisibility="Hidden">
+ >
                
             </ListView>
         </ScrollViewer>
