@@ -15,6 +15,7 @@ namespace menuVideoPlayer
     static public void SendPlayID(int ID)
     {
       if (playerWindow != null) playerWindow.RecievePlayID(ID);
+      if (menuWindow != null) menuWindow.refresh_Buttons(ID);
     }
   }
 }
