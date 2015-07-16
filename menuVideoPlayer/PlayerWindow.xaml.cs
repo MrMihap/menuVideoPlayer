@@ -27,7 +27,7 @@ namespace menuVideoPlayer
     {
       set
       {
-        string filename = Core.CMenuContainer.videoCollection.Where(x => x.ID == value).FirstOrDefault().VideoPath;
+        string filename = Core.CMenuContainer.videoCollectionData.Where(x => x.ID == value).FirstOrDefault().VideoPath;
 
         Uri Source = new Uri(filename, UriKind.Relative);
         if (Source != null)

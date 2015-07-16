@@ -70,8 +70,15 @@ namespace menuBuilder
     {
       if (File.Exists("menuConfig.xml"))
       {
-        appController.LoadFromFile("menuConfig.xml");
-        this.UpdateItemsList();
+        try
+        {
+          appController.LoadFromFile("menuConfig.xml");
+          this.UpdateItemsList();
+        }
+        catch(Exception ex)
+        {
+          MessageBox.Show("Файл данных поврежден");
+        }
       }
     }
 

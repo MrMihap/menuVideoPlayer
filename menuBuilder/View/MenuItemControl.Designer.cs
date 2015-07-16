@@ -101,9 +101,9 @@
       // 
       // EditButton
       // 
-      this.EditButton.Location = new System.Drawing.Point(720, 4);
+      this.EditButton.Location = new System.Drawing.Point(723, 3);
       this.EditButton.Name = "EditButton";
-      this.EditButton.Size = new System.Drawing.Size(109, 66);
+      this.EditButton.Size = new System.Drawing.Size(109, 69);
       this.EditButton.TabIndex = 3;
       this.EditButton.Text = "Изменить";
       this.EditButton.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@
       this.Controls.Add(this.label1);
       this.Controls.Add(this.remove);
       this.Name = "MenuItemControl";
-      this.Size = new System.Drawing.Size(852, 73);
+      this.Size = new System.Drawing.Size(852, 77);
       this.ResumeLayout(false);
       this.PerformLayout();
 

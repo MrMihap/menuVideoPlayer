@@ -29,31 +29,32 @@ namespace menuBuilder
     }
     public void saveFile(string filePath)
     {
-      doc = new XmlDocument();
-      XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
+      CMenuContainer.WriteToFile(filePath, menuItemsCollection, MainHeader);
+      //doc = new XmlDocument();
+      //XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
 
-      XmlElement root = doc.DocumentElement;
-      doc.InsertBefore(xmlDeclaration, root);
+      //XmlElement root = doc.DocumentElement;
+      //doc.InsertBefore(xmlDeclaration, root);
 
-      XmlElement config = doc.CreateElement(string.Empty, "config", string.Empty);
-      doc.AppendChild(config);
+      //XmlElement config = doc.CreateElement(string.Empty, "config", string.Empty);
+      //doc.AppendChild(config);
 
-      XmlText mainHeader = doc.CreateTextNode(MainHeader);
+      //XmlText mainHeader = doc.CreateTextNode(MainHeader);
 
-      XmlNode exhibName = doc.CreateElement("exhibitionName");
-      exhibName.AppendChild(mainHeader);
-      config.AppendChild(exhibName);
+      //XmlNode exhibName = doc.CreateElement("exhibitionName");
+      //exhibName.AppendChild(mainHeader);
+      //config.AppendChild(exhibName);
 
-      XmlElement menu =  (XmlElement)config.AppendChild(doc.CreateElement("menu"));
-      foreach (MenuItem item in menuItemsCollection)
-      {
-        XmlElement menuitem = (XmlElement) menu.AppendChild(doc.CreateElement("menuItem"));
-        ((XmlElement)menuitem.AppendChild(doc.CreateElement("header"))).AppendChild(doc.CreateTextNode(item.Header));
-        ((XmlElement)menuitem.AppendChild(doc.CreateElement("info"))).AppendChild(doc.CreateTextNode(item.Info));
-        ((XmlElement)menuitem.AppendChild(doc.CreateElement("videoPath"))).AppendChild(doc.CreateTextNode(item.VideoPath));
-      }
+      //XmlElement menu =  (XmlElement)config.AppendChild(doc.CreateElement("menu"));
+      //foreach (MenuItem item in menuItemsCollection)
+      //{
+      //  XmlElement menuitem = (XmlElement) menu.AppendChild(doc.CreateElement("menuItem"));
+      //  ((XmlElement)menuitem.AppendChild(doc.CreateElement("header"))).AppendChild(doc.CreateTextNode(item.Header));
+      //  ((XmlElement)menuitem.AppendChild(doc.CreateElement("info"))).AppendChild(doc.CreateTextNode(item.Info));
+      //  ((XmlElement)menuitem.AppendChild(doc.CreateElement("videoPath"))).AppendChild(doc.CreateTextNode(item.VideoPath));
+      //}
       
-      doc.Save(filePath);
+      //doc.Save(filePath);
     }
 
     public void RemoveElemByID(int ID)

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core
 {
+  [Serializable]
   public class MenuItem
   {
     public int ID;
@@ -19,5 +20,11 @@ namespace Core
       Info = info;
       VideoPath = videoPath;
     }
+  }
+  [Serializable]
+  public class videoCollection
+  {
+    public List<MenuItem> videos;
+    public string Header;
   }
 }

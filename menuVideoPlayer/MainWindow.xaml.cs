@@ -55,7 +55,7 @@ namespace menuVideoPlayer
 
       this.NameLabel.Content = CMenuContainer.Name;
 
-      foreach (Core.MenuItem menuItem in CMenuContainer.videoCollection)
+      foreach (Core.MenuItem menuItem in CMenuContainer.videoCollectionData)
       {
         menuItemsListBox.Items.Add(new MenuItemControl(menuItem));
       }
@@ -110,8 +110,8 @@ namespace menuVideoPlayer
       this.WindowState = System.Windows.WindowState.Maximized;
       playerWindow.Show();
       /* PURE EVIL POWER CONDENSED HERE*/
-      /* THE MOST TRUE CRUTCH IN THE WORLD I WRITE */
-      if (CMenuContainer.videoCollection.Count <= 6)
+      /* THE MOST TRUE CRUTCH IN THE WORLD WHICH I WRITE */
+      if (CMenuContainer.videoCollectionData.Count <= 6)
       {
         scrollView.SetValue(ScrollViewer.VerticalScrollBarVisibilityProperty, ScrollBarVisibility.Disabled);
       }
