@@ -141,24 +141,25 @@
             TargetType="{x:Type ScrollBar}">
             <Grid >
                 <Grid.RowDefinitions>
-                    <RowDefinition MaxHeight="104"/>
-                    <RowDefinition Height="0.00001*"/>
-                    <RowDefinition MaxHeight="104"/>
+                    <RowDefinition MaxHeight="104" Height="52*"/>
+                    <RowDefinition Height="33*"/>
+                    <RowDefinition Height="41*"/>
+                    <RowDefinition MaxHeight="104" Height="52*"/>
                 </Grid.RowDefinitions>
-                <Border Grid.RowSpan="3"  Background="Transparent" />
-                <RepeatButton Grid.Row="0" Style="{StaticResource ScrollBarLineButton}" Height="104"  Command="ScrollBar.LineUpCommand" Content="M 0 4 L 8 4 L 4 0 Z" />
-                <Track  Name="PART_Track" Grid.Row="1" IsDirectionReversed="true">
+                <Border Grid.RowSpan="4"  Background="Transparent" />
+                <RepeatButton Grid.Row="0" Style="{StaticResource ScrollBarLineButton}" Height="104"  Command="ScrollBar.LineUpCommand" Content="M 0 4 L 8 4 L 4 0 Z" Margin="-1,0" />
+                <Track  Name="PART_Track" Grid.Row="1" IsDirectionReversed="true" Grid.RowSpan="2">
                     <Track.DecreaseRepeatButton>
-                        <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="ScrollBar.PageUpCommand" />
+                        <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="ScrollBar.PageUpCommand" Margin="0,-1,0,0" />
                     </Track.DecreaseRepeatButton>
                     <Track.Thumb>
-                        <Thumb Style="{StaticResource ScrollBarThumb}" Margin="1,0,1,0" Background="{StaticResource HorizontalNormalBrush}" BorderBrush="{StaticResource HorizontalNormalBorderBrush}" />
+                        <Thumb Style="{StaticResource ScrollBarThumb}" Margin="0,-1.375,0,0" Background="{StaticResource HorizontalNormalBrush}" BorderBrush="{StaticResource HorizontalNormalBorderBrush}" Width="Auto" />
                     </Track.Thumb>
                     <Track.IncreaseRepeatButton>
-                        <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="ScrollBar.PageDownCommand" />
+                        <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="ScrollBar.PageDownCommand" Margin="0,0,0,-1.875" />
                     </Track.IncreaseRepeatButton>
                 </Track>
-                <RepeatButton Grid.Row="3"  Style="{StaticResource ScrollBarLineButtonBottom}" Height="105"  Command="ScrollBar.LineDownCommand" Content="M 0 0 L 4 4 L 8 0 Z"/>
+                <RepeatButton Grid.Row="3"  Style="{StaticResource ScrollBarLineButtonBottom}" Height="105"  Command="ScrollBar.LineDownCommand" Content="M 0 0 L 4 4 L 8 0 Z" Margin="-0.875,0,-1.125,-1"/>
 
             </Grid>
         </ControlTemplate>
