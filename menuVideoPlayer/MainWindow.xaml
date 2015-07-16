@@ -9,13 +9,15 @@
     <Window.Resources>
 
         <SolidColorBrush x:Key="StandardBorderBrush" Color="#FFFFFF" />
+        <ImageBrush x:Key="StandardScrollBackgroundBrush" ImageSource="controls/img/scrollback.png" TileMode="FlipY"/>
+        <ImageBrush x:Key="StandardScrollButtonBackgroundBrush" ImageSource="controls/img/scrollButtonback.png" TileMode="FlipY"/>
         <SolidColorBrush x:Key="StandardBackgroundBrush" Color="Transparent" />
         <SolidColorBrush x:Key="HoverBorderBrush" Color="#FFFFFF" />
         <SolidColorBrush x:Key="SelectedBackgroundBrush" Color="Transparent" />
         <SolidColorBrush x:Key="SelectedForegroundBrush" Color="Gray" />
         <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#FFFFFF" />
         <ImageBrush x:Key="NormalBrush" ImageSource="controls/img/info.png" />
-        <ImageBrush x:Key="NormalBrushTop" ImageSource="controls\img\top.png" />
+        <ImageBrush x:Key="NormalBrushTop" ImageSource="controls/img/top.png" />
         <ImageBrush x:Key="NormalBrushBottom" ImageSource="controls/img/bottom.png" />
         <SolidColorBrush x:Key="NormalBorderBrush" Color="#ffffff" />
         <SolidColorBrush x:Key="HorizontalNormalBrush" Color="Transparent" />
@@ -61,7 +63,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type RepeatButton}">
-                        <Border Name="Border"  Margin="1" CornerRadius="2" Background="{StaticResource NormalBrushTop}" BorderBrush="{StaticResource NormalBorderBrush}" BorderThickness="0">
+                        <Border Name="Border"  Margin="1" Background="{StaticResource NormalBrushTop}" BorderBrush="{StaticResource NormalBorderBrush}" BorderThickness="0">
                             <Path HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{StaticResource GlyphBrush}" Data="{Binding Path=Content,  RelativeSource={RelativeSource TemplatedParent}}" />
                         </Border>
                         <ControlTemplate.Triggers>
@@ -86,7 +88,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type RepeatButton}">
-                        <Border Name="Border"  Margin="1" CornerRadius="2" Background="{StaticResource NormalBrushBottom}" BorderBrush="{StaticResource NormalBorderBrush}" BorderThickness="0">
+                        <Border Name="Border"  Margin="1" Background="{StaticResource NormalBrushBottom}" BorderBrush="{StaticResource NormalBorderBrush}" BorderThickness="0">
                             <Path HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{StaticResource GlyphBrush}" Data="{Binding Path=Content,  RelativeSource={RelativeSource TemplatedParent}}" />
                         </Border>
                         <ControlTemplate.Triggers>
@@ -114,7 +116,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type RepeatButton}">
-                        <Border Background="Transparent" />
+                        <Border Background="{StaticResource StandardScrollBackgroundBrush}" />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -129,9 +131,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Thumb}">
-                        <Border CornerRadius="2" Background="White"
-          BorderBrush="{TemplateBinding BorderBrush}"
-          BorderThickness="1" />
+                        <Border Background="{StaticResource StandardScrollButtonBackgroundBrush}"  />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -141,12 +141,12 @@
             TargetType="{x:Type ScrollBar}">
             <Grid >
                 <Grid.RowDefinitions>
-                    <RowDefinition MaxHeight="106"/>
+                    <RowDefinition MaxHeight="104"/>
                     <RowDefinition Height="0.00001*"/>
-                    <RowDefinition MaxHeight="106"/>
+                    <RowDefinition MaxHeight="104"/>
                 </Grid.RowDefinitions>
-                <Border Grid.RowSpan="3"  CornerRadius="2" Background="Transparent" />
-                <RepeatButton Grid.Row="0" Style="{StaticResource ScrollBarLineButton}" Height="106"  Command="ScrollBar.LineUpCommand" Content="M 0 4 L 8 4 L 4 0 Z" />
+                <Border Grid.RowSpan="3"  Background="Transparent" />
+                <RepeatButton Grid.Row="0" Style="{StaticResource ScrollBarLineButton}" Height="104"  Command="ScrollBar.LineUpCommand" Content="M 0 4 L 8 4 L 4 0 Z" />
                 <Track  Name="PART_Track" Grid.Row="1" IsDirectionReversed="true">
                     <Track.DecreaseRepeatButton>
                         <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="ScrollBar.PageUpCommand" />
@@ -158,7 +158,7 @@
                         <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="ScrollBar.PageDownCommand" />
                     </Track.IncreaseRepeatButton>
                 </Track>
-                <RepeatButton Grid.Row="3"  Style="{StaticResource ScrollBarLineButtonBottom}" Height="106"  Command="ScrollBar.LineDownCommand" Content="M 0 0 L 4 4 L 8 0 Z"/>
+                <RepeatButton Grid.Row="3"  Style="{StaticResource ScrollBarLineButtonBottom}" Height="105"  Command="ScrollBar.LineDownCommand" Content="M 0 0 L 4 4 L 8 0 Z"/>
 
             </Grid>
         </ControlTemplate>
@@ -173,7 +173,7 @@
                 </Grid.ColumnDefinitions>
                 <Border
       Grid.ColumnSpan="3"
-      CornerRadius="2"
+      
       Background="#F0F0F0" />
                 <RepeatButton
       Grid.Column="0"
@@ -194,7 +194,7 @@
           Command="ScrollBar.PageRightCommand" />
                     </Track.IncreaseRepeatButton>
                 </Track>
-                <RepeatButton Grid.Column="3" Style="{StaticResource ScrollBarLineButton}" Width="107" Command="ScrollBar.LineRightCommand" Content="M 0 0 L 4 4 L 0 8 Z"/>
+                <RepeatButton Grid.Column="3" Style="{StaticResource ScrollBarLineButton}" Width="104" Command="ScrollBar.LineRightCommand" Content="M 0 0 L 4 4 L 0 8 Z"/>
             </Grid>
         </ControlTemplate>
         <!-- Style for overall  ScrollBar -->
@@ -204,12 +204,12 @@
             <Style.Triggers>
                 <Trigger Property="Orientation" Value="Horizontal">
                     <Setter Property="Width" Value="Auto"/>
-                    <Setter Property="Height" Value="106" />
+                    <Setter Property="Height" Value="104" />
                     <Setter Property="Template"
                         Value="{StaticResource HorizontalScrollBar}" />
                 </Trigger>
                 <Trigger Property="Orientation" Value="Vertical">
-                    <Setter Property="Width" Value="105"/>
+                    <Setter Property="Width" Value="104"/>
                     <Setter Property="Height" Value="Auto" />
                     <Setter Property="Template"
                         Value="{StaticResource VerticalScrollBar}" />
@@ -298,8 +298,9 @@
             <RowDefinition Height="200"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ScrollViewer  RenderTransformOrigin="0.5, 0.5" Margin="10,10,-10,20"  Width="Auto" Style="{StaticResource FavsScrollViewer}" Grid.Row="1">
-            <ListView Name="menuItemsListBox" ItemContainerStyle="{StaticResource LvItemStyle}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="10,0,150,0" ManipulationBoundaryFeedback="OnManipulationBoundaryFeedback">
+        <ScrollViewer  RenderTransformOrigin="0, 0" Margin="10,10,-10,20"  Width="Auto" Style="{StaticResource FavsScrollViewer}" Grid.Row="1">
+            <ListView Name="menuItemsListBox" ItemContainerStyle="{StaticResource LvItemStyle}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="10,0,150,0" ManipulationBoundaryFeedback="OnManipulationBoundaryFeedback" 
+                      ScrollViewer.VerticalScrollBarVisibility="Hidden">
                
             </ListView>
         </ScrollViewer>
