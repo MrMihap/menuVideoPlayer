@@ -111,7 +111,7 @@ namespace menuVideoPlayer
       playerWindow.Show();
       /* PURE EVIL POWER CONDENSED HERE*/
       /* THE MOST TRUE CRUTCH IN THE WORLD WHICH I WRITE */
-      if (CMenuContainer.videoCollectionData.Count <= 6)
+      if (CMenuContainer.videoCollectionData.Count <= 5)
       {
         scrollView.SetValue(ScrollViewer.VerticalScrollBarVisibilityProperty, ScrollBarVisibility.Disabled);
       }
