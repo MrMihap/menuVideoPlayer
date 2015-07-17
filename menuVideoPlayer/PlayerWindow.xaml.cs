@@ -20,9 +20,6 @@ namespace menuVideoPlayer
   /// </summary>
   public partial class PlayerWindow : Window
   {
-    private bool mediaPlayerIsPlaying = false;
-
-    private int _currentVideoId=-1;
     private int currentVideoID
     {
       set
@@ -40,8 +37,6 @@ namespace menuVideoPlayer
     {
       InitializeComponent();
 
-    
-      InitplayList();
     }
     public void InitplayList()
     {
@@ -73,12 +68,23 @@ namespace menuVideoPlayer
 
     private void Player_Loaded(object sender, RoutedEventArgs e)
     {
+      //var hwndSource = PresentationSource.FromVisual(this) as System.Windows.Interop.HwndSource;
+      //if (hwndSource != null)
+      //{
+      //  var hwndTarget = hwndSource.CompositionTarget;
+      //  if (hwndTarget != null) hwndTarget.RenderMode = System.Windows.Interop.RenderMode.SoftwareOnly;
+      //}
       this.WindowState = System.Windows.WindowState.Maximized;
+
+
+      InitplayList();
     }
 
     public void RecievePlayID(int ID)
     {
       currentVideoID = ID;
+      mePlayer.Stop();
+      mePlayer.Play();
     }
   }
 }

@@ -6,6 +6,6 @@
     <Window.CommandBindings>
         <CommandBinding Command="MediaCommands.Play" CanExecute="Play_CanExecute" Executed="Play_Executed" />
     </Window.CommandBindings>
-    <MediaElement Name="mePlayer" SourceUpdated="mePlayer_SourceUpdated" Grid.Row="1" LoadedBehavior="Play"  Stretch="UniformToFill"  MediaEnded="MediaElement_MediaEnded" />
+    <MediaElement Name="mePlayer" SourceUpdated="mePlayer_SourceUpdated" Grid.Row="1" LoadedBehavior="Manual"  Stretch="UniformToFill"  MediaEnded="MediaElement_MediaEnded" />
 
 </Window>
