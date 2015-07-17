@@ -64,5 +64,10 @@ namespace menuVideoPlayer.controls
       aboutItem.ShowDialog();
     }
 
+    private void Border1_MouseDown(object sender, MouseButtonEventArgs e)
+    {
+      CCommndsFlowController.SendPlayID(this.ID);
+    }
+
   }
 }
