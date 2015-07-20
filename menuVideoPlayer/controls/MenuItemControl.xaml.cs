@@ -56,7 +56,7 @@ namespace menuVideoPlayer.controls
       AboutItem aboutItem = new AboutItem(CMenuContainer.Name, this.Info);
       if (winForms.Screen.AllScreens.Count() > 1)
       {
-        winForms.Screen s1 = winForms.Screen.AllScreens[1];
+        winForms.Screen s1 = winForms.Screen.AllScreens.Where(x => x.Primary == true).First();
         System.Drawing.Rectangle r1 = s1.WorkingArea;
         aboutItem.Left = r1.Left;
         aboutItem.Top = r1.Top;
