@@ -9,12 +9,12 @@ namespace menuVideoPlayer
   static class CCommndsFlowController
   {
     static public MainWindow menuWindow = null;
-    static public PlayerWindow playerWindow = null;
+    //static public PlayerWindow playerWindow = null;
 
 
     static public void SendPlayID(int ID)
     {
-      if (playerWindow != null) playerWindow.RecievePlayID(ID);
+      //if (playerWindow != null) playerWindow.RecievePlayID(ID);
       if (menuWindow != null) menuWindow.refresh_Buttons(ID);
     }
   }

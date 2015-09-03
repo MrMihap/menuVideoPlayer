@@ -24,37 +24,33 @@ namespace menuVideoPlayer
   public partial class MainWindow : Window
   {
     private bool IsClosed = false;
-    private PlayerWindow playerWindow;
+    //private PlayerWindow playerWindow;
     public MainWindow()
     {
       CMenuContainer.LoadFromConfig();
       InitializeComponent();
 
-
       //this.Topmost = true;
       this.WindowStartupLocation = System.Windows.WindowStartupLocation.Manual;
 
-  //this.Topmost = true;
- this.WindowStartupLocation = System.Windows.WindowStartupLocation.Manual;
+      // создаем
+      //playerWindow = new PlayerWindow();
+      if (Screen.AllScreens.Count() > 1)
+      {
+        Screen main = Screen.AllScreens.Where(s => s.Primary).First();
+        //Screen sub = Screen.AllScreens.Where(s => !s.Primary).First();
+        System.Drawing.Rectangle mainRect = main.WorkingArea;
+        //System.Drawing.Rectangle subRect = sub.WorkingArea;
+        this.Left = mainRect.Left;
+        this.Top = mainRect.Top;
 
- // создаем
- playerWindow = new PlayerWindow();
- if (Screen.AllScreens.Count() > 1)
- {
-   Screen main = Screen.AllScreens.Where(s => s.Primary).First();
-   Screen sub = Screen.AllScreens.Where(s => !s.Primary).First();
-   System.Drawing.Rectangle mainRect = main.WorkingArea;
-   System.Drawing.Rectangle subRect = sub.WorkingArea;
-   this.Left = mainRect.Left;
-   this.Top = mainRect.Top;
-
-   playerWindow.Top = subRect.Top;
-   playerWindow.Left = subRect.Left - 1;
- }
-      CCommndsFlowController.playerWindow = playerWindow;
+        //playerWindow.Top = subRect.Top;
+        //playerWindow.Left = subRect.Left - 1;
+      }
+      //CCommndsFlowController.playerWindow = playerWindow;
       CCommndsFlowController.menuWindow = this;
       this.Closed += MainWindow_Closed;
-      playerWindow.Closed += playerWindow_Closed;
+      //playerWindow.Closed += playerWindow_Closed;
 
       this.NameLabel.Content = CMenuContainer.Name;
       foreach (Core.MenuItem menuItem in CMenuContainer.videoCollectionData)
@@ -98,7 +94,7 @@ namespace menuVideoPlayer
     void MainWindow_Closed(object sender, EventArgs e)
     {
       IsClosed = true;
-      playerWindow.Close();
+      //playerWindow.Close();
     }
 
 
@@ -116,7 +112,7 @@ namespace menuVideoPlayer
       //  var hwndTarget = hwndSource.CompositionTarget;
       //  if (hwndTarget != null) hwndTarget.RenderMode = System.Windows.Interop.RenderMode.SoftwareOnly;
       //}
-      playerWindow.Show();
+      //playerWindow.Show();
       /* PURE EVIL POWER CONDENSED HERE*/
       /* THE MOST TRUE CRUTCH IN THE WORLD WHICH I WRITE */
       if (CMenuContainer.videoCollectionData.Count <= 5)

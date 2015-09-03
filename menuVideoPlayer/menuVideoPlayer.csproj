@@ -182,11 +182,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="menuConfig.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="controls\img\background.png" />
   </ItemGroup>
   <ItemGroup>

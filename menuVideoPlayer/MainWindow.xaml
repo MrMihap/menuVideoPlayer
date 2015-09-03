@@ -305,6 +305,6 @@
                
             </ListView>
         </ScrollViewer>
-        <Label Name="NameLabel" Content="Название музея, выставки или на худой конец терминала" HorizontalAlignment="Left" Margin="80,0,0,52" VerticalAlignment="Bottom" Width="1653" Height="80" FontFamily="Segoe UI Semibold" FontSize="50" Foreground="White"/>
+        <Label Name="NameLabel" Content="Название музея, выставки или, на худой, конец терминала" HorizontalAlignment="Left" Margin="80,0,0,52" VerticalAlignment="Bottom" Width="1653" Height="80" FontFamily="Segoe UI Semibold" FontSize="50" Foreground="White"/>
     </Grid>
 </Window>
