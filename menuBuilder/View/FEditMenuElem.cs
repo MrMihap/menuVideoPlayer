@@ -38,7 +38,6 @@ namespace menuBuilder.View
             filePath.Text = dialog.FileName.Replace(dialog.InitialDirectory, "");
           else
           filePath.Text = dialog.FileName; 
-          MessageBox.Show("Файл успешно выбран");
           break;
         case System.Windows.Forms.DialogResult.Cancel:
           break;
